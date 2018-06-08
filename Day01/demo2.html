@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DemoSecondApp</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+<div id="app">
+	<p>{{message}}</p>
+	<input type="text" v-model="message">
+</div>
+</body>
+<script type="text/javascript">
+	var app = new Vue({
+  		el: '#app',
+  		data: {
+  			message:"ABC"
+  		}
+	})
+</script>
+</html>

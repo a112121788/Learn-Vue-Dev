@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo3</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+<div id="app">
+	<p>{{message}}</p>
+	<custom-componnet v-bind:hash1='hash1'></custom-componnet>
+</div>
+</body>
+
+<script type="text/javascript">
+	Vue.component('custom-componnet', {
+		props: ['hash1'],
+		template: '<p>{{ hash1.text }}</p>'
+	})
+
+	var app = new Vue({
+  		el: '#app',
+  		data: {
+  			hash1: {text: '随他吧'},
+  			message:"ABC"
+  		}
+	})
+</script>
+</html>
